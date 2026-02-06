@@ -39,8 +39,8 @@ bird_y = 300
 bird_velocity = 0
 # TODO 1: Tweaking the physics
 # Looks like the player is falling too quickly not giving a change to flap it's wing, maybe tweak around with the value of this variable
-gravity = 9.81
-jump = -10
+gravity = 4.5
+jump = -8
 # Pipe Variables -->
 pipe_x = 400
 pipe_width = 70
@@ -64,7 +64,7 @@ running = True
 while running:
     # TODO 6: Changing the name!
     # D'oh! This is not yout name isn't follow the detailed instructions on the PDF to complete this task.
-    player_name = Gabriel and Jericho
+    player_name = "Jericho"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -98,7 +98,7 @@ while running:
             # TODO 4: Fixing the scoring
             # When you pass through the pipes the score should be updated to the current score + 1. Implement the
             # logic to accomplish this scoring system.
-            score = 1
+            score += 1
 
         if bird_y > 600 or bird_y < 0:
             game_over = True
