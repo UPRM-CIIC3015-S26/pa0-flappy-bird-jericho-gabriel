@@ -57,23 +57,25 @@ pipe_speed = 4
 score = 0
 game_over = False
 game_started = False
+scored = False
+
 
 clock = pygame.time.Clock()
 
 running = True
 while running:
     # TODO 6: Changing the name!
-    # D'oh! This is not yout name isn't follow the detailed instructions on the PDF to complete this task.
+    # Doh! This is not out name isn't follow the detailed instructions on the PDF to complete this task.
     player_name = "Jericho"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                if game_started == False:
+                if not game_started:
                     game_started = True
                     bird_velocity = jump
-                elif game_over == False:
+                elif not game_over:
                     bird_velocity = jump
                 else:
                     # TODO 3: Spawning back the Player
@@ -89,17 +91,18 @@ while running:
                     pipe_height = random.randint(80, 600 - pipe_gap - 80)
 
     if game_started == True and game_over == False:
-        bird_velocity = bird_velocity + gravity
-        bird_y = bird_y + bird_velocity
-        pipe_x = pipe_x - pipe_speed
+        bird_velocity += gravity
+        bird_y += bird_velocity
+        pipe_x -= pipe_speed
+
+        if not scored and (pipe_x + pipe_width) < bird_x:
+            score += 1
+            scored = True
 
         if pipe_x < -70:
             pipe_x = 400
             pipe_height = random.randint(80, 600 - pipe_gap - 80)
-            # TODO 4: Fixing the scoring
-            # When you pass through the pipes the score should be updated to the current score + 1. Implement the
-            # logic to accomplish this scoring system.
-            score += 1
+            scored = False
 
         if bird_y > 600 or bird_y < 0:
             game_over = True
@@ -121,7 +124,7 @@ while running:
     score_text = small_font.render(str(score), True, WHITE)
     screen.blit(score_text, (score_x, score_y))
 
-    if game_started == False: # Start UI -->
+    if not game_started: # Start UI -->
         title_text = big_font.render("Flappy Bird", True, WHITE)
         instruction_text = small_font.render("Press space bar to flap!", True, WHITE)
         screen.blit(title_text, (title_x, title_y))
