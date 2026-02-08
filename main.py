@@ -10,7 +10,7 @@ some of the game mechanics.
 # Setup the screen -->
 screen = pygame.display.set_mode((400, 600))
 pygame.display.set_caption("Flappy Bird")
-
+score_sound = pygame.mixer.Sound("assets/score.wav")
 # Colors -->
 # NOTE: This is in the RGB (Red, Green, Blue) format
 WHITE = (255, 255, 255)
@@ -66,7 +66,7 @@ running = True
 while running:
     # TODO 6: Changing the name!
     # Doh! This is not out name isn't follow the detailed instructions on the PDF to complete this task.
-    player_name = "Jericho"
+    player_name = "Gabriel"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -88,7 +88,9 @@ while running:
                     score = 0
                     game_over = False
                     game_started = True
+                    scored = False
                     pipe_height = random.randint(80, 600 - pipe_gap - 80)
+
 
     if game_started == True and game_over == False:
         bird_velocity += gravity
@@ -97,6 +99,7 @@ while running:
 
         if not scored and (pipe_x + pipe_width) < bird_x:
             score += 1
+            score_sound.play()
             scored = True
 
         if pipe_x < -70:
