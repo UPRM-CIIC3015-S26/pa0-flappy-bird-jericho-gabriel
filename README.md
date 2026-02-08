@@ -14,14 +14,14 @@ The project is designed as an introductory programming assignment (PA0). Most of
 ## 👥 Team Information
 
 ### Partner #1
-- **Name:**
-- **Student Number:**
-- **Email:**
+- **Name:** Gabriel Enrique Andújar Rosario
+- **Student Number:** 802-25-6561
+- **Email:** gabriel.andujar1@upr.edu
 
 ### Partner #2
-- **Name:**
-- **Student Number:**
-- **Email:**
+- **Name:** Jericho Parkhurst 
+- **Student Number:** 802-75-0136
+- **Email:** jericho.parkhurst@upr.edu
 
 ## ⭐ Bonus Features (Optional)
 List and briefly describe any additional features or enhancements implemented beyond the basic requirements.
