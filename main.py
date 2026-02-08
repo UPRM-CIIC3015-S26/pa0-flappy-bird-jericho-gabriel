@@ -1,4 +1,6 @@
-import pygame, random
+import pygame, random, os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 pygame.init()
 '''
 Welcome to PA0 – Flappy Bird! Throughout this code, you are going to find a recreation of a game you have probably
@@ -10,7 +12,7 @@ some of the game mechanics.
 # Setup the screen -->
 screen = pygame.display.set_mode((400, 600))
 pygame.display.set_caption("Flappy Bird")
-score_sound = pygame.mixer.Sound("assets/score.wav")
+score_sound = pygame.mixer.Sound(os.path.join(BASE_DIR, "assets", "score.wav"))
 # Colors -->
 # NOTE: This is in the RGB (Red, Green, Blue) format
 WHITE = (255, 255, 255)
