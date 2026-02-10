@@ -25,5 +25,11 @@ The project is designed as an introductory programming assignment (PA0). Most of
 
 ## ⭐ Bonus Features (Optional)
 List and briefly describe any additional features or enhancements implemented beyond the basic requirements.
-- Bonus Feature 1
-- Bonus Feature 2
+Persistent high score
+Background image
+Two-background swap
+Timed difficulty spike
+Pipe color change on spike
+Player color change on spike
+Text color change on spike for readability
+Music
