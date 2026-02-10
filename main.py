@@ -98,7 +98,7 @@ running = True
 while running:
     # TODO 6: Changing the name!
     # Doh! This is not out name isn't follow the detailed instructions on the PDF to complete this task.
-    player_name = "Gabriel"
+    player_name = "Jericho"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
