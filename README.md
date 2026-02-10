@@ -25,8 +25,8 @@ The project is designed as an introductory programming assignment (PA0). Most of
 
 ## ⭐ Bonus Features (Optional)
 List and briefly describe any additional features or enhancements implemented beyond the basic requirements.
-Persistent high score \n
-Background image
+1. Persistent high score
+2. Background image
 Two-background swap
 Timed difficulty spike
 Pipe color change on spike
