@@ -27,9 +27,9 @@ The project is designed as an introductory programming assignment (PA0). Most of
 List and briefly describe any additional features or enhancements implemented beyond the basic requirements.
 1. Persistent high score
 2. Background image
-Two-background swap
-Timed difficulty spike
-Pipe color change on spike
-Player color change on spike
-Text color change on spike for readability
-Music
+3. Two-background swap
+4. Timed difficulty spike
+5. Pipe color change on spike
+6. Player color change on spike
+7. Text color change on spike for readability
+8. Music
